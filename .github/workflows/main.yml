@@ -34,6 +34,4 @@ jobs:
 
       # Step 4: Run tests using pytest
       - name: Run tests
-        run: |
-          source venv/bin/activate  # Activate the virtual environment again
-          pytest  # Run the tests with pytest
+        run: venv/bin/pytest tests  # Run tests from the 'tests' directory
