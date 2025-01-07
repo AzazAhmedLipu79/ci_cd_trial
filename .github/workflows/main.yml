@@ -1,25 +1,24 @@
 name: Python CI Pipeline
 
-# Trigger the workflow on push to the main branch or pull requests targeting it
+# Trigger on push or PR to the development branch
 on:
   push:
     branches:
-      - main  # Trigger on pushes to 'main'
+      - development  # Trigger on pushes to 'development'
   pull_request:
     branches:
-      - main  # Trigger on pull requests targeting 'main'
+      - development  # Trigger on pull requests targeting 'development'
 
 jobs:
-  # Job 1: Set up Python environment, install dependencies, and run tests
   build_and_test:
     runs-on: ubuntu-latest  # Use the latest Ubuntu environment
 
     steps:
-      # Step 1: Checkout code from the repository
+      # Step 1: Checkout the code from the repository
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # Step 2: Set up Python environment
+      # Step 2: Set up the Python environment
       - name: Set up Python
         uses: actions/setup-python@v3
         with:
@@ -29,9 +28,11 @@ jobs:
       - name: Install dependencies
         run: |
           python -m venv venv  # Create a virtual environment
-          source venv/bin/activate  # Activate the virtual environment 
+          source venv/bin/activate  # Activate the virtual environment
           pip install -r requirements.txt  # Install dependencies from 'requirements.txt'
 
       # Step 4: Run tests using pytest
       - name: Run tests
         run: venv/bin/pytest -v tests  # Run tests from the 'tests' directory
+
+ 
