@@ -11,5 +11,5 @@ def test_multiplication():
 
 def test_division():
     # we will fix this test later
-    assert 10 / 2 == 10 
+    assert 10 / 2 == 1+1+1+1+1+1+1+1+1+1
 
