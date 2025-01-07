@@ -9,7 +9,6 @@ def test_subtraction():
 def test_multiplication():
     assert 2 * 0 == 0
 
-def test_division():
-    # we will fix this test later
-    assert 10 / 2 == 1+1+1+1+1+1+1+1+1+1
+def test_division(): 
+    assert 10 / 2 == 5
 
