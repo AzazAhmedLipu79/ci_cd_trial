@@ -34,4 +34,4 @@ jobs:
 
       # Step 4: Run tests using pytest
       - name: Run tests
-        run: venv/bin/pytest tests  # Run tests from the 'tests' directory
+        run: venv/bin/pytest -v tests  # Run tests from the 'tests' directory
