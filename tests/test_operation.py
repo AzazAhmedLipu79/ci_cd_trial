@@ -12,3 +12,9 @@ def test_multiplication():
 def test_division(): 
     assert 10 / 2 == 5
 
+def test_division_by_zero():
+    with pytest.raises(ZeroDivisionError):
+        1 / 0
+
+
+
