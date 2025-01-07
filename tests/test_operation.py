@@ -8,3 +8,6 @@ def test_subtraction():
 
 def test_multiplication():
     assert 2 * 0 == 0
+
+def test_division():
+    assert 10 / 2 == 10
